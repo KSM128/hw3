@@ -86,9 +86,19 @@ int main(int argc, char* argv[])
     print(head);
 
     // Test out your linked list code
+    Node* smaller = nullptr;
+    Node* larger = nullptr;
+    llpivot(head, smaller, larger, 8);
+    cout << "Head is nullptr: " << to_string(head == nullptr) << endl;
+    cout << "Smaller: ";
+    print(smaller);
+    cout << "Larger: ";
+    print(larger);
 
-
-
+    head = readList(argv[1]);
+    // head = llfilter(head);
+    cout << "Filtered: ";
+    print(head);
     
     return 0;
 
